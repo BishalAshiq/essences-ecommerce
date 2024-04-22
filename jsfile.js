@@ -148,3 +148,32 @@ function formatTime(time) {
 setInterval(updateCountdown, 1000);
 
 updateCountdown();
+
+
+// Most View
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector('.most-view-slider');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+
+   
+    function initSlider() {
+       
+        const sliderOptions = {
+         
+        };
+       
+    }
+
+    function moveSlide(direction) {
+        const slideWidth = slider.querySelector('.most-view-slide').offsetWidth;
+        const currentOffset = parseInt(slider.style.transform.slice(11)) || 0;
+        const newOffset = direction === 'prev' ? currentOffset + slideWidth : currentOffset - slideWidth;
+        slider.style.transform = `translateX(${newOffset}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => moveSlide('prev'));
+    nextBtn.addEventListener('click', () => moveSlide('next'));
+
+    initSlider();
+});

@@ -612,6 +612,114 @@ margin: 10px 0;
     font-weight: 700;
 
 }
+.shopCart-tags{
+    font-family: "Charis SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+.mv-tag{
+    font-family: "Charis SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.mv-imgs{
+    width: 150px;
+    height: 100px;
+}
+
+/* Add your CSS styles here */
+.most-view-container {
+    position: relative;
+    overflow: hidden;
+    /* Add more styles as needed */
+}
+
+.most-view-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.most-view-slide {
+    flex: 0 0 auto;
+    margin-right: 10px; 
+}
+
+.mv-imgs {
+    max-width: 100%;
+    height: auto;
+  
+}
+
+.mv-content {
+    background-color: white;
+}
+
+.mv-details {
+   background-color: white;
+   display: grid;
+   place-items: center;
+}
+
+.prev-slide,
+.next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000; 
+    z-index: 1;
+}
+
+.prev-slide {
+    left: 0;
+}
+
+.next-slide {
+    right: 0;
+}
+.mv-ammount{
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.mv-ammount-span{
+    font-family: "Inter", sans-serif;
+    color: rgba(103, 110, 110, 1);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.top-brands-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.topbrand-text{
+        font-family: "Charis SIL", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+}
+.top-single-brand {
+    flex: 0 0 auto;
+    width: 20%; /* Show 5 items in big screen */
+    display: grid;
+    place-items: center;
+}
+.top-brand-img{
+    /* width: 30px; */
+    padding: 15px;
+    background-color: white;
+    /* border-radius: 100%; */
+    /* border: 1px solid gray; */
+}
+
 @media screen and (max-width: 1024px) {
     .all-departmental-product-div{
         display: grid;
@@ -619,6 +727,9 @@ margin: 10px 0;
         overflow: hidden;
     }
     .banner-single-brand {
+        width: 50%; /* Show 2 items in tablet screen */
+    }
+    .top-single-brand {
         width: 50%; /* Show 2 items in tablet screen */
     }
     .nav-third-div{
@@ -656,6 +767,10 @@ margin: 10px 0;
         /* justify-content: space-between; */
     background-color: white;
     }
+    .shopcart-all-div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -665,6 +780,9 @@ margin: 10px 0;
         overflow: hidden;
     }
     .banner-single-brand {
+        width: 100%; /* Show 1 item in mobile screen */
+    }
+    .top-single-brand {
         width: 100%; /* Show 1 item in mobile screen */
     }
     .nav-third-div{
@@ -701,5 +819,9 @@ margin: 10px 0;
     }
     .quick-div{
      flex-wrap: wrap;
+    }
+    .shopcart-all-div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
